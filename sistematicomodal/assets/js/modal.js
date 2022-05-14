@@ -83,12 +83,13 @@ function ActualizarRegistro(){
     	table.rows[SelectedRowIndex].cells[0].innerHTML=document.getElementById('IDTextBox').value;
         table.rows[SelectedRowIndex].cells[1].innerHTML=document.getElementById('FirstNameTextBox').value;
         table.rows[SelectedRowIndex].cells[2].innerHTML=document.getElementById('LastNameTextBox').value;
+		table.rows[SelectedRowIndex].cells[3].innerHTML=document.getElementById('NumChildrenTextBox').value
           //
         var genero = GetCheckedRadioValue("Sexo");
-        table.rows[SelectedRowIndex].cells[3].innerHTML=genero;     
+        table.rows[SelectedRowIndex].cells[4].innerHTML=genero;     
         //
         var pasatiempos= GetCheckedBoxesValue("Pasatiempos");  
-        table.rows[SelectedRowIndex].cells[4].innerHTML=pasatiempos;      
+        table.rows[SelectedRowIndex].cells[5].innerHTML=pasatiempos;      
     }
     modal.style.display = "none";
 }

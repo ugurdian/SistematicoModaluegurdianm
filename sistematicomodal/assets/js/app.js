@@ -7,6 +7,7 @@ function InsertarRegistro(){
         var e=a.insertCell(3);
         var f=a.insertCell(4);
         var g=a.insertCell(5);
+        var h=a.insertCell(6);
         b.innerHTML=document.getElementById('IDTextBox').value;
         c.innerHTML=document.getElementById('FirstNameTextBox').value;
         d.innerHTML=document.getElementById('LastNameTextBox').value;
@@ -16,9 +17,13 @@ function InsertarRegistro(){
         //
         var pasatiempos= GetCheckedBoxesValue("Pasatiempos");  
         f.innerHTML=pasatiempos;
+
+        var hijos=getElementById("NumChildrenTextBox").value;
+        g.innerHTML=hijos;
+
         var buttons ="<button name='EditButton' onclick='ShowModalForEdit(this)'>Editar</button>";
         buttons = buttons.concat("&nbsp;").concat("<button name='DeleteButton' onclick='deleteRow(this)'>Eliminar</button>");
-        g.innerHTML=buttons;
+        h.innerHTML=buttons;
 
         var modal = document.getElementById('myModal');
         modal.style.display = "none";
